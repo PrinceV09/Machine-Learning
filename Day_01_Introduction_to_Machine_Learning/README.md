@@ -6,4 +6,5 @@ Machine Learning is a field of Computer Science that uses statistical techniques
 
 1. Supervised Learning
 2. Unsupervised Learning
-3. Reinforcement Learning 
+3. Semi-supervised Learning
+4. Reinforcement Learning 
