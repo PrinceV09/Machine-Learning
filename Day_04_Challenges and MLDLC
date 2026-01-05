@@ -1,0 +1,24 @@
+### Challenges In Machine Learning
+
+1. Data Quality and Quantity.
+2. Lack of labeled Data.
+3. Overfitting and Underfitting.
+4. Feature selection and Engineering.
+5. High Computational cost.
+6. Model Interpretability.
+7. Bias and Fairness.
+8. Data privacy and security.
+9. Generalization to real-world Data.
+10. Deployment and Maintenance.
+
+### Machine Learning Development Life Cycle
+
+1. Frame the problem.
+2. Gathering Data.
+3. Data Preprocessing.
+4. Exploratory Data Analysis.
+5. Feature Enginerring and Selection.
+6. Model Training, Evaluation and Selection.
+7. Model Deployment.
+8. Testing.
+9. Optimize.
