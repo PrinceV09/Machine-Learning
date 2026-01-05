@@ -1,4 +1,4 @@
-**Challenges In Machine Learning**
+ # **Challenges In Machine Learning**
 
 1. Data Quality and Quantity.
 2. Lack of labeled Data.
@@ -11,7 +11,7 @@
 9. Generalization to real-world Data.
 10. Deployment and Maintenance.
 
-**Machine Learning Development Life Cycle**
+# **Machine Learning Development Life Cycle**
 
 1. Frame the problem.
 2. Gathering Data.
