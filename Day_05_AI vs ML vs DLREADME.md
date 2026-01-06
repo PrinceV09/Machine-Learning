@@ -16,7 +16,7 @@ Types of Machine Learning:
 
 Examples: Spam email detection, Price prediction, Movie recommendations.
 
-# Deep Learning (DL)**
+# **Deep Learning (DL)**
 
 Deep Learning is a subset of ML that uses deep neural networks with multiple hidden layers to learn complex patterns automatically.
 
