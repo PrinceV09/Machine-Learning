@@ -26,16 +26,16 @@ scaled_data = scaler.fit_transform(df)<br>
 scaled_df = pd.DataFrame(scaled_data, columns=df.columns)<br>
 print(scaled_df)<br>
 
-**Before Standardization**<br>
+**2. Before Standardization**<br>
 
 - Salary dominates distance based models.
 - Age becomes almost irrelevant.
 
-**After Standardization**<br>
+**3. After Standardization**<br>
 
 - Both have mean 0 , stanard deviation 1.
 - Model treats them fairly.
 
-**Effect of outliers on Standardization**<br>
+**4. Effect of outliers on Standardization**<br>
 
 - Outliers distort standardization by shifting the mean and inflating the standard deviation, compressing normal data points and reducing model performance; therefore standardization should be avoided or replaced by robust scaling when significant outliers are present.
