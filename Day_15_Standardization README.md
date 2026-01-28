@@ -1,4 +1,4 @@
-**Standardization**<br>
+**1. Standardization**<br>
 Standardization is a Feature Scaling Technique where we transform data so that:<br>
 
 - Mean = 0<br>
