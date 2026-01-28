@@ -1,28 +1,28 @@
 **1. Standardization**<br>
-Standardization is a Feature Scaling Technique where we transform data so that:<br>
+- Standardization is a Feature Scaling Technique where we transform data so that:<br>
 
 - Mean = 0<br>
 - Standard Deviation - 1<br>
 
 **Formula**<br>
-z = (Original value - Mean of the Feature)/Standard Deviation
+z = (Original value - Mean of the Feature) / Standard Deviation
 
 **Example**<br>
-from sklearn.preprocessing import StandardScaler
-import pandas as pd
+from sklearn.preprocessing import StandardScaler<br>
+import pandas as pd<br>
 
 data = {
-    'Age': [25, 30, 35],
+    'Age': [25, 30, 35],<br>
     'Salary': [30000, 50000, 80000]
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data)<br>
 
-scaler = StandardScaler()
-scaled_data = scaler.fit_transform(df)
+scaler = StandardScaler()<br>
+scaled_data = scaler.fit_transform(df)<br>
 
-scaled_df = pd.DataFrame(scaled_data, columns=df.columns)
-print(scaled_df)
+scaled_df = pd.DataFrame(scaled_data, columns=df.columns)<br>
+print(scaled_df)<br>
 
 **Before Standardization**<br>
 - Salary dominates distance based models.
