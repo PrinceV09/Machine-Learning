@@ -22,6 +22,7 @@ $$
 **2. Mean Normalization** <br>
 
 Centers data around 0, scaled by range.<br>
+
 $$
 x' = \frac{x - \mu}{x_{\max} - x_{\min}}
 $$
