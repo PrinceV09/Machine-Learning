@@ -1,8 +1,10 @@
 **1. Normalization** <br>
 <hr>
-Normalization is a technique often applied as part of data preparation for Machine Learning. The goal of Normalization is to change the values of numeric columns in the dataset to use a common scale, without distorting differences in the ranges of values or losing information.
+Normalization is a technique often applied as part of data preparation for Machine Learning. The goal of Normalization is to change the values of numeric columns in the dataset to use a common scale, without distorting differences in the ranges of values or losing information.<br>
 
-**Min-Max Scaling** <br>
+### Scaling Techniques<br> 
+
+**1. Min-Max Scaling** <br>
 
 $$
 x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
@@ -17,7 +19,7 @@ $$
 - Image Pixel scaling.<br>
 - When features bounds are known.<br>
 
-**Mean Normalization** <br>
+**2. Mean Normalization** <br>
 
 Centers data around 0, scaled by range.<br>
 $$
@@ -32,7 +34,7 @@ $$
 - Gradient Descent.
 - When data is fairly clean.
 
-**MaxAbs Scaling** <br>
+**3. MaxAbs Scaling** <br>
 
 Scales data to [-1,1] using maximum absolute value.<br>
 
@@ -49,7 +51,7 @@ $$
 - NLP feature matrices.
 - Data with positive abd negative values.
 
-**Robust Scaling**
+**4. Robust Scaling**
 
 Uses Median and IQR, not Mean and Standard.<br>
 
@@ -60,6 +62,7 @@ $$
 ### Intution <br>
 1. Ignores Extreme values.<br>
 2. Focuses on Central distribution.<br>
+
 ### When to use <br>
 - Real world Data.
 - Finance, Sensor Data.
