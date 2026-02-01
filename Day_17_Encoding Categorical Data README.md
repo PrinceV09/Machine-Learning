@@ -21,7 +21,7 @@ When categories have no natural order
 🧪 Python Code
 from sklearn.preprocessing import LabelEncoder
 
-le = LabelEncoder()
+le = LabelEncoder()<br>
 df['color_encoded'] = le.fit_transform(df['color'])
 
 2️⃣ Ordinal Encoding
@@ -46,5 +46,5 @@ Size
 🧪 Python Code
 from sklearn.preprocessing import OrdinalEncoder
 
-encoder = OrdinalEncoder(categories=[['High School', 'Bachelor', 'Master']])
+encoder = OrdinalEncoder(categories=[['High School', 'Bachelor', 'Master']])<br>
 df['Education_encoded'] = encoder.fit_transform(df[['Education']])
