@@ -1,5 +1,7 @@
 🔢 Encoding Techniques in Machine Learning
+
 1️⃣ Label Encoding
+
 📌 Definition
 
 Converts categories into integer labels
