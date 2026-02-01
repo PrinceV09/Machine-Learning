@@ -1,32 +1,50 @@
-**1. Label Encoding**<br>
-<hr>
-- converts categories into integer labels.<br>
-- No Order is assumed.<br>
-**Intution**
-- Just assigns ID's to categories.<br>
-- Good for target variables, not always for input features.<br>
-**When to use**<br>
-- target variable y in classification.<br>
-- Tree based models.<br>
-- When categories have no natural order.<br>
-**- Python Code**<br>
-<hr>
-from sklearn.preprocessing import LabelEncoder<br>
-le = LabelEncoder()<br>
-df['color_encoded'] = le.fit_transform(df['color'])<br>
+🔢 Encoding Techniques in Machine Learning
+1️⃣ Label Encoding
+📌 Definition
 
-**2. Ordinal Encoding**
-<hr>
-- Converts categories into numbers while preserving order.<br>
-**Intution**<br>
-- Higher number = Higher Level<br>
-- Tells model relative ranking.<br>
-**When to use**<br>
-- When categories have clear ranking.<br>
-- Education level.<br>
-- Size.<br>
-**- Python Code**
-<hr>
-from sklearn.preprocessing import OrdinalEncoder<br>
-encoder = OriginalEncoder(categories=[['High School', 'Bachelor', 'Master']])<br>
+Converts categories into integer labels
+
+No order is assumed
+
+🧠 Intuition
+
+Just assigns IDs to categories
+
+✅ When to Use
+
+Target variable y in classification
+
+Tree-based models
+
+When categories have no natural order
+
+🧪 Python Code
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+df['color_encoded'] = le.fit_transform(df['color'])
+
+2️⃣ Ordinal Encoding
+📌 Definition
+
+Converts categories into numbers while preserving order
+
+🧠 Intuition
+
+Higher number = Higher level
+
+Tells the model the relative ranking
+
+✅ When to Use
+
+When categories have a clear ranking
+
+Education level
+
+Size
+
+🧪 Python Code
+from sklearn.preprocessing import OrdinalEncoder
+
+encoder = OrdinalEncoder(categories=[['High School', 'Bachelor', 'Master']])
 df['Education_encoded'] = encoder.fit_transform(df[['Education']])
