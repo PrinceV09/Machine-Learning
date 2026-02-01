@@ -1,52 +1,56 @@
-🔢 Encoding Techniques in Machine Learning
+# 🔢 Encoding Techniques in Machine Learning
 
-1️⃣ Label Encoding
+---
 
-📌 Definition
+## 1️⃣ Label Encoding
 
-Converts categories into integer labels
+### 📌 Definition
 
-No order is assumed
+* Converts categories into integer labels
+* No order is assumed
 
-🧠 Intuition
+### 🧠 Intuition
 
-Just assigns IDs to categories
+* Just assigns IDs to categories
 
-✅ When to Use
+### ✅ When to Use
 
-Target variable y in classification
+* Target variable **y** in classification
+* Tree-based models
+* When categories have **no natural order**
 
-Tree-based models
+### 🧪 Python Code
 
-When categories have no natural order
-
-🧪 Python Code
+python
 from sklearn.preprocessing import LabelEncoder
 
-le = LabelEncoder()<br>
+le = LabelEncoder()
 df['color_encoded'] = le.fit_transform(df['color'])
 
-2️⃣ Ordinal Encoding
-📌 Definition
 
-Converts categories into numbers while preserving order
+---
 
-🧠 Intuition
+## 2️⃣ Ordinal Encoding
 
-Higher number = Higher level
+### 📌 Definition
 
-Tells the model the relative ranking
+* Converts categories into numbers while preserving order
 
-✅ When to Use
+### 🧠 Intuition
 
-When categories have a clear ranking
+* Higher number = Higher level
+* Tells the model the relative ranking
 
-Education level
+### ✅ When to Use
 
-Size
+* When categories have a **clear ranking**
+* Education level
+* Size
 
-🧪 Python Code
+### 🧪 Python Code
+
+python
 from sklearn.preprocessing import OrdinalEncoder
 
-encoder = OrdinalEncoder(categories=[['High School', 'Bachelor', 'Master']])<br>
+encoder = OrdinalEncoder(categories=[["High School", "Bachelor", "Master"]])
 df['Education_encoded'] = encoder.fit_transform(df[['Education']])
