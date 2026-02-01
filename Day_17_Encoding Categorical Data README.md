@@ -24,7 +24,7 @@
 python
 from sklearn.preprocessing import LabelEncoder
 
-le = LabelEncoder()
+le = LabelEncoder()<br>
 df['color_encoded'] = le.fit_transform(df['color'])
 
 
