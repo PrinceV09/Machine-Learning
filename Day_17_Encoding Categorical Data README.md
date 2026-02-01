@@ -52,5 +52,5 @@ df['color_encoded'] = le.fit_transform(df['color'])
 python
 from sklearn.preprocessing import OrdinalEncoder
 
-encoder = OrdinalEncoder(categories=[["High School", "Bachelor", "Master"]])
+encoder = OrdinalEncoder(categories=[["High School", "Bachelor", "Master"]])<br>
 df['Education_encoded'] = encoder.fit_transform(df[['Education']])
