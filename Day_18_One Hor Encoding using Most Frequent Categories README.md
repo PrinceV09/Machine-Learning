@@ -1,31 +1,38 @@
-🔹 One-Hot Encoding with Top-K Most Frequent Categories
-📌 Problem
+# 🔹 One-Hot Encoding with Top-K Most Frequent Categories
 
-- High cardinality categorical features.
+---
 
-- Too many dummy columns.
+## 📌 Problem
 
-- Overfitting and memory issues.
+- High cardinality categorical features
+- Too many dummy columns
+- Overfitting and memory issues
 
-💡 Solution
+---
 
-- Keep Top-K most frequent categories.
+## 💡 Solution
 
-- Group remaining categories as Other.
+- Keep **Top-K most frequent categories**
+- Group remaining categories as **`Other`**
+- Apply **One-Hot Encoding**
 
-- Apply One-Hot Encoding.
+---
 
-⚙️ Training Data Processing<br>
-🔸 Step 1: Identify Top-K Categories<br>
+## ⚙️ Training Data Processing
+
+### 🔸 Step 1: Identify Top-K Categories
+
 top_categories = X_train[col].value_counts().nlargest(top_k).index
 
-🔸 Step 2: Replace Rare Categories with Other<br>
+🔸 Step 2: Replace Rare Categories with Other
+
 X_train[col] = X_train[col].where(
     X_train[col].isin(top_categories),
     'Other'
 )
 
 🔸 Step 3: Apply One-Hot Encoding
+
 import pandas as pd
 
 X_train = pd.get_dummies(
@@ -37,16 +44,18 @@ X_train = pd.get_dummies(
 🧪 Test Data Processing
 📍 Task
 
-Apply the same Top-K categories learned from training data.
-⚠️ Do NOT recompute categories from test data.
+Apply the same Top-K categories learned from training data
+⚠️ Do NOT recompute categories from test data
 
 🔸 Step 1: Replace Rare Categories
+
 X_test[col] = X_test[col].where(
     X_test[col].isin(top_categories),
     'Other'
 )
 
 🔸 Step 2: Apply One-Hot Encoding
+
 X_test = pd.get_dummies(
     X_test,
     columns=[col],
@@ -54,6 +63,7 @@ X_test = pd.get_dummies(
 )
 
 🔸 Step 3: Align Test Columns with Train Columns
+
 X_test = X_test.reindex(
     columns=X_train.columns,
     fill_value=0
@@ -61,18 +71,18 @@ X_test = X_test.reindex(
 
 ✅ When to Use
 
-- Logistic Regression.
+- Logistic Regression
 
-- Linear Models.
+- Linear Models
 
-- Tree-based models with high cardinality features.
+- Tree-based models with high-cardinality features
 
 ⭐ Benefits
 
-- Reduced dimensionality.
+- Reduced dimensionality
 
-- Prevents overfitting.
+- Prevents overfitting
 
-- Memory efficient.
+- Memory efficient
 
-- Production-safe encoding.
+- Production-safe encoding
