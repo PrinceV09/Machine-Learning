@@ -1,51 +1,59 @@
-🔹 What is Nominal Categorical Variable?
+### Nominal Categorical Variable<hr>
+
 📌 Definition
 
 - A Nominal Categorical Variable is a type of categorical variable in which:
 
-- Categories have no natural order or ranking.
+- Categories have no natural order or ranking
 
-- Categories are just names or labels.
+- Categories are just names or labels
 
-- Numerical comparison is not possible.
+- Numerical comparison is not possible
 
-⚙️ In Machine Learning
+### ⚙️ In Machine Learning<hr>
+
 - Nominal categorical variables are usually encoded using:
 
-- One-Hot Encoding.
+- One-Hot Encoding
 
-- Dummy Encoding.
+- Dummy Encoding
 
-🔸 One-Hot Encoding
+### 🔸 One-Hot Encoding
 
-- Creates separate binary columns for each category.
+- Creates separate binary columns for each category
 
-- Each column contains 0 or 1.
+- Each column contains 0 or 1
 
-- Prevents the model from assuming any order.
+- Prevents the model from assuming any order
 
-🔸 Dummy Encoding
+### 🔸 Dummy Encoding
 
-- Similar to One-Hot Encoding.
+- Similar to One-Hot Encoding
 
-- Drops one column to avoid multicollinearity (dummy variable trap).
+- Drops one column to avoid multicollinearity
+(Dummy Variable Trap)
 
-🔹 Column Transformer in Machine Learning.
+### 🔹 Column Transformer in Machine Learning<hr>
+
 📌 Definition
 
-- A Column Transformer is used to apply different preprocessing techniques to different columns of a dataset in a single pipeline.
+- A Column Transformer is used to apply different preprocessing techniques
+to different columns of a dataset in a single pipeline.
 
-💡 Why Column Transformer is Needed?
+### 💡 Why Column Transformer is Needed?
 
-- Same columns can be numerical → need scaling.
+In a dataset:
 
-- Same columns can be categorical → need One-Hot Encoding.
+- Numerical columns → need Scaling
 
-- Same columns can be ordinal → need Ordinal Encoding.
+- Categorical columns → need One-Hot Encoding
 
-🔧 Basic Syntax (sklearn)
+- Ordinal columns → need Ordinal Encoding
 
-from sklearn.compose import ColumnTransformer
+➡️ Column Transformer handles all feature types together.
+
+🔧 Basic Syntax (sklearn)<br>
+from sklearn.compose import ColumnTransformer<br>
 
 ColumnTransformer(
     transformers=[
